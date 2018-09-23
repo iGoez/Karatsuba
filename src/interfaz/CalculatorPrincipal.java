@@ -9,7 +9,6 @@ import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 import model.KaratsubaMultipliation;
@@ -62,9 +61,7 @@ public class CalculatorPrincipal extends JFrame implements ActionListener, Mouse
 	public void actionPerformed(ActionEvent e) {
 		String command = e.getActionCommand();
 		long n1 = 0;
-		long d1 = 0;
 		long n2 = 0;
-		long d2 = 0;
 
 		txtScreen1.getText();
 		txtScreen3.getText();
@@ -73,8 +70,7 @@ public class CalculatorPrincipal extends JFrame implements ActionListener, Mouse
 			n1 = Long.valueOf(txtScreen1.getText());
 			n2 = Long.valueOf(txtScreen3.getText());
 
-			//txtScreen5.setText(kMul.multiplyRational(n1, d1, n2, d2).getNumerator() + "");
-			//txtScreen6.setText(kMul.multiplyRational(n1, d1, n2, d2).getDenominator() + "");
+			txtScreen5.setText(kMul.karatsubaMul(n1, n2) + "");
 		} else if (command.equalsIgnoreCase("AC")) {
 			txtScreen1.setText("");
 			txtScreen3.setText("");
@@ -90,43 +86,43 @@ public class CalculatorPrincipal extends JFrame implements ActionListener, Mouse
 		if (command.equalsIgnoreCase("1")) {
 			if (txtScreen1.isEditable()) {
 				txtScreen1.setText(txtScreen1.getText() + "" + 1);
-			}else if (txtScreen3.isEditable()) {
+			} else if (txtScreen3.isEditable()) {
 				txtScreen3.setText(txtScreen3.getText() + "" + 1);
 			}
 		} else if (command.equalsIgnoreCase("2")) {
 			if (txtScreen1.isEditable()) {
 				txtScreen1.setText(txtScreen1.getText() + "" + 2);
-			}else if (txtScreen3.isEditable()) {
+			} else if (txtScreen3.isEditable()) {
 				txtScreen3.setText(txtScreen3.getText() + "" + 2);
 			}
 		} else if (command.equalsIgnoreCase("3")) {
 			if (txtScreen1.isEditable()) {
 				txtScreen1.setText(txtScreen1.getText() + "" + 3);
-			}else if (txtScreen3.isEditable()) {
+			} else if (txtScreen3.isEditable()) {
 				txtScreen3.setText(txtScreen3.getText() + "" + 3);
 			}
 		} else if (command.equalsIgnoreCase("4")) {
 			if (txtScreen1.isEditable()) {
 				txtScreen1.setText(txtScreen1.getText() + "" + 4);
-			}else if (txtScreen3.isEditable()) {
+			} else if (txtScreen3.isEditable()) {
 				txtScreen3.setText(txtScreen3.getText() + "" + 4);
 			}
 		} else if (command.equalsIgnoreCase("5")) {
 			if (txtScreen1.isEditable()) {
 				txtScreen1.setText(txtScreen1.getText() + "" + 5);
-			}else if (txtScreen3.isEditable()) {
+			} else if (txtScreen3.isEditable()) {
 				txtScreen3.setText(txtScreen3.getText() + "" + 5);
 			}
 		} else if (command.equalsIgnoreCase("6")) {
 			if (txtScreen1.isEditable()) {
 				txtScreen1.setText(txtScreen1.getText() + "" + 6);
-			}else if (txtScreen3.isEditable()) {
+			} else if (txtScreen3.isEditable()) {
 				txtScreen3.setText(txtScreen3.getText() + "" + 6);
 			}
 		} else if (command.equalsIgnoreCase("7")) {
 			if (txtScreen1.isEditable()) {
 				txtScreen1.setText(txtScreen1.getText() + "" + 7);
-			}else if (txtScreen3.isEditable()) {
+			} else if (txtScreen3.isEditable()) {
 				txtScreen3.setText(txtScreen3.getText() + "" + 7);
 			}
 		} else if (command.equalsIgnoreCase("8")) {
@@ -138,7 +134,7 @@ public class CalculatorPrincipal extends JFrame implements ActionListener, Mouse
 		} else if (command.equalsIgnoreCase("9")) {
 			if (txtScreen1.isEditable()) {
 				txtScreen1.setText(txtScreen1.getText() + "" + 9);
-			}else if (txtScreen3.isEditable()) {
+			} else if (txtScreen3.isEditable()) {
 				txtScreen3.setText(txtScreen3.getText() + "" + 9);
 			}
 		} else if (command.equalsIgnoreCase("0")) {
@@ -318,7 +314,7 @@ public class CalculatorPrincipal extends JFrame implements ActionListener, Mouse
 		if (arg0.getComponent() == txtScreen1) {
 			txtScreen1.setEditable(true);
 			txtScreen3.setEditable(false);
-		}else if (arg0.getComponent() == txtScreen3) {
+		} else if (arg0.getComponent() == txtScreen3) {
 			txtScreen1.setEditable(false);
 			txtScreen3.setEditable(true);
 		}

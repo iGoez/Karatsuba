@@ -28,6 +28,6 @@ public class KaratsubaMultipliation {
 		long z2 = karatsubaMul(b, d);
 		long z3 = karatsubaMul((a + b), (c + d));
 
-		return (long) (z1 * Math.pow(10, lengthMax*2)) + (long)((z3-z2-z1)*Math.pow(10,(lengthMax/2))  +  (z2));
+		return (long) (z1 * Math.pow(10, lengthMax*2)) + (long)((z3-z2-z1)*Math.pow(10,(lengthMax))  +  (z2));
 	}
 }

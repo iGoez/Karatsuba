@@ -330,6 +330,7 @@ public class CalculatorPrincipal extends JFrame implements ActionListener, Mouse
 		//OPERATIONS
 		
 		butAdd = new JButton("+");
+		butAdd.setEnabled(false);
 		butAdd.setBounds(217, 138, 42, 40);
 		butAdd.setFont(new Font("Arial", Font.BOLD, 10));
 		butAdd.setActionCommand("+");
@@ -337,6 +338,7 @@ public class CalculatorPrincipal extends JFrame implements ActionListener, Mouse
 		add(butAdd);
 		
 		buSusb = new JButton("-");
+		buSusb.setEnabled(false);
 		buSusb.setBounds(267, 138, 40, 40);
 		buSusb.setFont(new Font("Arial", Font.BOLD, 18));
 		buSusb.setActionCommand("-");
@@ -351,6 +353,7 @@ public class CalculatorPrincipal extends JFrame implements ActionListener, Mouse
 		add(butMultiply);
 		
 		butDivide = new JButton("/");
+		butDivide.setEnabled(false);
 		butDivide.setBounds(267, 193, 40, 40);
 		butDivide.setFont(new Font("Arial", Font.BOLD, 20));
 		butDivide.setActionCommand("/");
@@ -358,6 +361,7 @@ public class CalculatorPrincipal extends JFrame implements ActionListener, Mouse
 		add(butDivide);
 
 		butSquare = new JButton("x^2");
+		butSquare.setEnabled(false);
 		butSquare.setBounds(22, 245, 55, 40);
 		butSquare.setFont(new Font("Arial", Font.BOLD, 10));
 		butSquare.setActionCommand("x^2");
@@ -365,6 +369,7 @@ public class CalculatorPrincipal extends JFrame implements ActionListener, Mouse
 		add(butSquare);
 		
 		butInverse = new JButton("x^-1");
+		butInverse.setEnabled(false);
 		butInverse.setBounds(152, 245, 55, 40);
 		butInverse.setFont(new Font("Arial", Font.BOLD, 10));
 		butInverse.setActionCommand("x^-1");
@@ -372,6 +377,7 @@ public class CalculatorPrincipal extends JFrame implements ActionListener, Mouse
 		add(butInverse);
 		
 		butSymplify = new JButton("Simplificar");
+		butSymplify.setEnabled(false);
 		butSymplify.setBounds(217, 245, 90, 40);
 		butSymplify.setFont(new Font("Arial", Font.BOLD, 10));
 		butSymplify.setActionCommand("Simplificar");

@@ -1,9 +1,5 @@
 package model;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 public class KaratsubaMultipliation {
 
 	public long karatsubaMul(long number1, long number2) {
@@ -33,14 +29,5 @@ public class KaratsubaMultipliation {
 		long z3 = karatsubaMul((a + b), (c + d));
 
 		return (long) (z1 * Math.pow(10, lengthMax*2)) + (long)((z3-z2-z1)*Math.pow(10,(lengthMax/2))  +  (z2));
-	}	
-	
-	public static void main(String[] arg) throws NumberFormatException, IOException {
-		KaratsubaMultipliation km = new KaratsubaMultipliation();
-
-		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-		Long index = Long.parseLong(bf.readLine());
-		Long index1 = Long.parseLong(bf.readLine());
-		System.out.println(km.karatsubaMul(index, index1));
 	}
 }
